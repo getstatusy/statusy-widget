@@ -12,7 +12,7 @@ function embedStylesheet() {
 
 function initializeWidget() {
   var widget = $('#statusy');
-  widget.append('<div id="statusy-widget"><h3 class="statusy-widget-h3">Current Status: Good</h3></div>');
+  widget.append('<div id="statusy-widget"><h3 class="statusy-widget-h3">Current Status: ' + currentData.statuspage.overall_status + '</h3></div>');
 }
 
 function expandHandler() {
@@ -21,8 +21,12 @@ function expandHandler() {
   var container = $('#statusy');
   if(smallWidget.is(":visible")) {
     smallWidget.hide();
-    container.append('<div id="statusy-widget-expanded"><p>This is it expanded!</p></div>');
-    document.getElementById('statusy-widget-expanded').accordion();
+    container.append('<div id="statusy-widget-expanded"></div>');
+    var widgetExpanded = $('#statusy-widget-expanded');
+    for (service in currentData.statuspage.services) {
+      var s = currentData.statuspage.services[service];
+      widgetExpanded.append('<p>' + s.description + ' : ' + s.status);
+    }
   } else {
     smallWidget.show();
     document.getElementById('statusy-widget-expanded').remove();
@@ -30,12 +34,18 @@ function expandHandler() {
 }
 
 function fetchData() {
-  
+  $.ajax({
+    url: 'https://app.statusy.co/api/v1/public/statuspage/statusy',
+    success: function(data) {
+      currentData = data;
+      initializeWidget();
+  }});
+
 }
 
 $(document).ready(function() {
   embedStylesheet();
-  initializeWidget();
+  fetchData();
   $('#statusy').click(function() {
     expandHandler();
   });
