@@ -12,11 +12,10 @@ function embedStylesheet() {
 
 function initializeWidget() {
   var widget = $('#statusy');
-  widget.append('<div id="statusy-widget"><h3 class="statusy-widget-h3">Current Status: ' + currentData.statuspage.overall_status + '</h3></div>');
+  widget.append('<div id="statusy-widget"><p class="statusy-widget-closed-text-small">Current Status</p><p class="statusy-widget-closed-text-large">' + currentData.statuspage.overall_status + '</p></div>');
 }
 
 function expandHandler() {
-  console.log('doing expand');
   var smallWidget = $('#statusy-widget');
   var container = $('#statusy');
   if(smallWidget.is(":visible")) {

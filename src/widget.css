@@ -1,24 +1,40 @@
-#statusy {}
-
-#statusy-widget {
-  position: fixed;
-  bottom: 0;
-  right: 25px;
-  width: 250px;
-  height: 50px;
-  background-color: #000;
+#statusy {
+  font-family:Arial;
 }
 
-#statusy-widget-expanded {
+#statusy #statusy-widget {
+  border-radius: 10px;
   position: fixed;
-  bottom: 0;
+  bottom: -10;
   right: 25px;
-  height:250px;
-  width: 250px;
-  background-color:#223453;
+  width: 200px;
+  height: 60px;
+  background-color: #e0e0e0;
 }
 
-#statusy-widget .statusy-widget-h3 {
-  color: #fff;
+#statusy #statusy-widget-expanded {
+  border-radius: 10px;
+  position: fixed;
+  bottom: -10;
+  right: 25px;
+  height:260px;
+  width: 200px;
+  background-color:#e0e0e0;
+}
+
+#statusy #statusy-widget .statusy-widget-closed-text-small {
+  color: #2d2d2d;
   text-align:center;
+  margin:0;
+  padding:0;
+  margin-top:10px;
+  font-size:12px;
+}
+
+#statusy #statusy-widget .statusy-widget-closed-text-large {
+  color: #2d2d2d;
+  text-align:center;
+  margin:0;
+  padding:0;
+  font-size:16px;
 }
