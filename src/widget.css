@@ -9,17 +9,17 @@
   right: 25px;
   width: 200px;
   height: 60px;
-  background-color: #e0e0e0;
+  background-color:#f9f9f9;
 }
 
 #statusy #statusy-widget-expanded {
   border-radius: 10px;
   position: fixed;
-  bottom: -10;
+  bottom: 10;
   right: 25px;
-  height:260px;
-  width: 200px;
-  background-color:#e0e0e0;
+  width: 300px;
+  background-color:#f9f9f9;
+  overflow:auto;
 }
 
 #statusy #statusy-widget .statusy-widget-closed-text-small {
@@ -37,4 +37,85 @@
   margin:0;
   padding:0;
   font-size:16px;
+}
+
+#statusy #statusy-widget-expanded .statusy-widget-open-text-small {
+  color: #2d2d2d;
+  text-align:center;
+  margin:0;
+  padding:0;
+  margin-top:10px;
+  font-size:12px;
+}
+
+#statusy #statusy-widget-expanded .statusy-widget-open-text-large {
+  color: #2d2d2d;
+  text-align:center;
+  margin:0;
+  padding:0;
+  font-size:16px;
+}
+
+#statusy #statusy-widget-expanded .statusy-widget-open-container {
+  padding:.25em;
+}
+
+#statusy #statusy-widget-expanded .statusy-widget-status-paragraph {
+  text-align:center;
+  margin-bottom:.15em;
+}
+
+#statusy #statusy-widget-expanded .statusy-widget-status-blip {
+  width:60%;
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-left:auto;
+  margin-right:auto;
+  border-color: #22A722;
+  color: #22A722;
+  font-size: 13px;
+  padding: 8px 12px;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border: 2px solid;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.45px;
+}
+
+#statusy #statusy-widget-expanded .statusy-widget-footer {
+  text-align:center;
+  margin-top:1em;
+}
+
+#statusy #statusy-widget-expanded .statusy-widget-statuspage-link {
+  text-decoration: none;
+  color:#808080;
+}
+
+#statusy #statusy-widget-expanded .statusy-widget-statuspage-link:hover {
+  text-decoration: none;
+  font-weight:bold;
+  color:#808080;
+}
+
+#statusy #statusy-widget-expanded .statusy-widget-footer-linkback {
+  color:#d8d8d8;
+  margin-top:1em;
+  margin-bottom:1em;
+  font-size:12px;
+}
+
+#statusy #statusy-widget-expanded .statusy-widget-footer-linkback a {
+  color:#d8d8d8;
+  text-decoration:none;
 }
