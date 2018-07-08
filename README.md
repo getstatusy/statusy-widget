@@ -6,9 +6,11 @@ webpage to alert customers of potential service issues.
 ## Screenshots
 
 Collpased: 
+
 ![Collapsed](https://ptpb.pw/ff6h.png)
 
 Expanded:
+
 ![Expanded](https://ptpb.pw/LMfV.png)
 
 ## Installation & Configuration
